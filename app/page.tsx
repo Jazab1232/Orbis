@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-neutral-950 text-neutral-50 font-sans">
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
-        <div className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+        <div className="text-2xl font-bold tracking-tighter bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
           IndusNext.
         </div>
         <div className="space-x-4">
