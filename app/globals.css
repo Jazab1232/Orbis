@@ -20,11 +20,11 @@
     /* #9CA3AF */
 
     /* Muted / Gray */
-    --muted: 0 0% 92%;
+    --muted: 0 0% 85%;
     /* #E5E7EB */
     --muted-dark: 220 10% 23%;
     /* #374151 */
-    --muted-light: 0 0% 98%;
+    --muted-light: 0 0% 95%;
     /* #F8FAFC */
 
     /* Status Colors */
@@ -37,7 +37,7 @@
     --background: 210 40% 98%;
     --card: 0 0% 100%;
     --border: 214 31% 91%;
-    --input: 220 14% 96%;
+    --input: 220 0% 96%;
     --ring: 221 83% 53%;
 
     --radius: 0.5rem;
@@ -54,7 +54,7 @@
 
     --muted: 217 19% 27%;
     --muted-dark: 210 10% 20%;
-    --muted-light: 210 5% 40%;
+    --muted-light: 210 5% 30%;
 
     --background: 222 47% 11%;
     --card: 222 33% 18%;

@@ -6,7 +6,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export default function Topbar() {
     return (
-        <header className="w-full h-15 flex items-center justify-between border-b border-border px-6 bg-background text-foreground shadow-sm">
+        <header className="w-full h-15 flex items-center justify-between border-b border-border px-6 bg-card text-foreground shadow-sm">
             <div className="bg-primary h-8 w-8 rounded-[8px]"></div>
             <SearchInput />
             <div className="flex items-center gap-4">
