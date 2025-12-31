@@ -23,7 +23,7 @@ import {
 import { Textarea } from "../ui/textarea"
 import ButtonPrimary from "../common/ButtonPrimary"
 import ButtonSecondary from "../common/ButtonSecondary"
-// import Calendar22 from "../calendar-22"
+import Calendar22 from "../calendar-22"
 
 export interface TaskSubtask {
     id: string
@@ -158,7 +158,7 @@ export default function TaskDetail({
                             <SelectTrigger className="w-full bg-input h-[40px] border-muted focus:ring-0 focus:ring-offset-0">
                                 <SelectValue placeholder="Select Status" />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="bg-card">
                                 {STATUS_OPTIONS.map((status) => (
                                     <SelectItem key={status} value={status}>
                                         {status}
@@ -176,7 +176,7 @@ export default function TaskDetail({
                             <SelectTrigger className="w-full bg-input h-[40px] border-muted focus:ring-0 focus:ring-offset-0">
                                 <SelectValue placeholder="Select Priority" />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="bg-card">
                                 {PRIORITY_OPTIONS.map((priority) => (
                                     <SelectItem key={priority} value={priority}>
                                         {priority}
@@ -219,12 +219,7 @@ export default function TaskDetail({
                         <Label className="text-sm font-medium text-text-medium mb-2 block">
                             Due Date
                         </Label>
-                        {/* <Input
-                            type="date"
-                            defaultValue="2025-01-20"
-                            className="text-sm bg-input focus-visible:ring-0 focus-visible:ring-offset-0"
-                        /> */}
-                        {/* <Calendar22 /> */}
+                        <Calendar22 />
                     </div>
 
                     <div>

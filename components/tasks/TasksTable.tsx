@@ -10,7 +10,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import ActionPopup from "../common/ActionPopup";
 import TaskDetail from "./TaskDetail";
 
-// -------------------- TYPES --------------------
 export type TaskStatus =
     | "In Progress"
     | "Blocked"

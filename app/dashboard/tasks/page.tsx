@@ -9,6 +9,7 @@ import StatsCard from "@/components/common/StatsCard";
 import { TasksTable } from "@/components/tasks/TasksTable";
 import { TASKS_DATA } from "@/components/tasks/TASK_DATA";
 import { Button } from "@/components/ui/button";
+import SelectedFilterButton from "@/components/common/SelectedFilterButton";
 
 const TASK_VIEW = [
     { label: 'List', value: 'list' },
@@ -20,6 +21,7 @@ export default function TasksPage() {
     const [open, setOpen] = useState(false);
     const [filters, setFilters] = useState<string[]>([]);
     const [view, setView] = useState<string>("list");
+    console.log('filters', filters);
 
     return (
         <div className="space-y-6">
@@ -73,6 +75,35 @@ export default function TasksPage() {
 
                 </div>
             </div>
+            {/* Task Filters */}
+            {filters.length > 0 && (
+                <div className="flex flex-wrap justify-end items-center gap-2 bg-card p-2 rounded-[8px] shadow-sm">
+                    {filters.map((filterValue) => {
+                        const filterDef = TASK_FILTERS.find(f => f.value === filterValue);
+                        if (!filterDef) return null;
+
+                        return (
+                            <SelectedFilterButton
+                                key={filterValue}
+                                filter={{ label: filterDef.label, group: filterDef.group }}
+                                onClick={() => {
+                                    setFilters(prev => prev.filter(f => f !== filterValue));
+                                }}
+                            />
+                        );
+                    })}
+                    <div className="ml-2 pl-2 border-l">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setFilters([])}
+                            className="text-text-medium hover:text-red-500 h-8 font-medium bg-transparent hover:bg-red-50"
+                        >
+                            Clear All
+                        </Button>
+                    </div>
+                </div>
+            )}
             {/* Stats Cards */}
             <div className="grid grid-cols-4 gap-3">
                 <StatsCard
